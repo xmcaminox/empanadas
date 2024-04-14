@@ -1,0 +1,158 @@
+/* Agregar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #87ceeb; /* Azul cielo */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.imagen-circular {
+    width: 250px; /* Ajusta el tamaño según sea necesario */
+    height: 250px;
+    border-radius: 50%; /* Esto hace que la imagen sea circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra */
+    overflow: hidden; /* Asegura que la imagen circular no se desborde */
+    perspective: 1000px; /* Ajusta la perspectiva para el efecto de distancia */
+    display: flex; /* Utiliza flexbox para centrar la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    margin: 0 auto; /* Centra horizontalmente el contenedor circular */    
+}
+
+.imagen-circular img {
+    width: 100%; /* Asegura que la imagen llene el contenedor circular */
+    height: auto;
+    display: block; /* Evita el espacio adicional debajo de la imagen */
+    transition: transform 0.5s; /* Añade transición para un efecto suave */
+}
+
+.imagen-circular:hover img {
+    transform: translateZ(50px); /* Mueve la imagen en el eje Z para simular distancia */
+    filter: brightness(0.7); /* Opcional: Reduce el brillo para simular sombra */
+}
+
+
+#slider {
+    background-color: #87ceeb; /* Azul cielo */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos básicos para el slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según sea necesario */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
+#quien-soy
+{
+    background-color: #ffb6c1; /* Rosa claro */
+    padding: 100px;
+    margin-bottom: 20px;
+}
+
+
+#catalogo
+{
+    background-color: #ff6961; /* Rojo claro */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+#ubicacion
+{
+    /*background-color: #77dd77; /* Verde claro */
+    margin-bottom: 20px;
+    background-image: url('fondo_sb.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    color: #fff; /* Color de texto para mejor legibilidad */
+    padding: 80px;
+    height: 300px;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+#contacto {
+    background-color: #fdfd96; /* Amarillo claro */
+    padding: 100px;
+    margin-bottom: 20px;
+}
+
+#contacto a img {
+    width: 90px; /* Tamaño del ícono de WhatsApp */
+    height: auto;
+}
+
+#quien-soy h2,
+#catalogo h2,
+#ubicacion h2,
+#contacto h2 {
+    color: #333;
+}
+
+.empanadas-container {
+    display: flex;
+    flex-wrap: wrap; /* Hace que las empanadas se envuelvan a la siguiente línea cuando no hay suficiente espacio */
+    justify-content: space-around; /* Distribuye las empanadas equitativamente en el contenedor */
+}
+
+.empanada {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 600px;
+}
+
+.empanada img {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    /*width: 100%; /* La imagen se ajusta al ancho del contenedor */
+    border-top-left-radius: 20px; /* Ajusta los bordes de la imagen */
+    border-top-right-radius: 20px;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1); /* Agrega sombra a cada imagen */
+
+}
+
+.empanada .descripcion {
+    flex: 1;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #ff69b4; /* Rosa */
+}
