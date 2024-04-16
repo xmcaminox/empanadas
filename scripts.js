@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Iniciar el slider
-    setInterval(nextSlide, 5000);
-    
+    setInterval(nextSlide, 4000);
+
 });
