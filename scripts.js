@@ -1,16 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtener todos los slides
-    var slides = document.querySelectorAll('.slide');
-    var currentSlide = 0;
-    
+$(document).ready(function(){
     // Función para cambiar el slide cada 5 segundos
     function nextSlide() {
-        slides[currentSlide].classList.remove('active');
+        var slides = $('.slide');
+        var currentSlide = $('.slide.active').index();
+        slides.eq(currentSlide).removeClass('active');
         currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+        slides.eq(currentSlide).addClass('active');
     }
 
     // Iniciar el slider
-    setInterval(nextSlide, 4000);
-
+    setInterval(nextSlide, 5000);
 });
